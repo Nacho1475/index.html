@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis Favoritos</title>
+  <style>
+    :root{
+      --bg1:#0f172a;
+      --bg2:#1e293b;
+      --card:#111827;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --line:rgba(255,255,255,.08);
+      --btn1:#38bdf8;
+      --btn2:#22c55e;
+      --btn3:#f59e0b;
+      --btn4:#a78bfa;
+      --btn5:#fb7185;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, #1d4ed8 0%, transparent 35%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height:100vh;
+    }
+
+    .wrap{
+      max-width:1000px;
+      margin:0 auto;
+      padding:28px 16px 40px;
+    }
+
+    .hero{
+      background:rgba(17,24,39,.72);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px;
+      backdrop-filter:blur(10px);
+      box-shadow:0 20px 60px rgba(0,0,0,.25);
+      margin-bottom:20px;
+    }
+
+    h1{
+      margin:0 0 10px;
+      font-size:clamp(28px, 4vw, 44px);
+      line-height:1.1;
+    }
+
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:1.02rem;
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+    }
+
+    .category{
+      background:rgba(15,23,42,.78);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+    }
+
+    .category h2{
+      margin:0 0 14px;
+      font-size:1.15rem;
+    }
+
+    .links{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:12px;
+    }
+
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:14px 16px;
+      border-radius:16px;
+      text-decoration:none;
+      color:white;
+      font-weight:700;
+      letter-spacing:.2px;
+      border:1px solid rgba(255,255,255,.08);
+      transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+      box-shadow:0 10px 24px rgba(0,0,0,.2);
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      opacity:.95;
+    }
+
+    .b1{background:linear-gradient(135deg,var(--btn1),#2563eb);}
+    .b2{background:linear-gradient(135deg,var(--btn2),#16a34a);}
+    .b3{background:linear-gradient(135deg,var(--btn3),#d97706);}
+    .b4{background:linear-gradient(135deg,var(--btn4),#7c3aed);}
+    .b5{background:linear-gradient(135deg,var(--btn5),#e11d48);}
+
+    .footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:.92rem;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Mis páginas favoritas</h1>
+      <p class="subtitle">Acceso rápido desde cualquier navegador, organizado por categorías.</p>
+    </section>
+
+    <section class="grid">
+
+      <article class="category">
+        <h2>Buscadores</h2>
+        <div class="links">
+          <a class="btn b1" href="https://www.google.com" target="_blank" rel="noopener">Google</a>
+          <a class="btn b2" href="https://duckduckgo.com" target="_blank" rel="noopener">DuckDuckGo</a>
+          <a class="btn b3" href="https://www.bing.com" target="_blank" rel="noopener">Bing</a>
+        </div>
+      </article>
+
+      <article class="category">
+        <h2>Redes sociales</h2>
+        <div class="links">
+          <a class="btn b4" href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
+          <a class="btn b5" href="https://x.com" target="_blank" rel="noopener">X</a>
+          <a class="btn b1" href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </article>
+
+      <article class="category">
+        <h2>Noticias</h2>
+        <div class="links">
+          <a class="btn b2" href="https://elpais.com" target="_blank" rel="noopener">El País</a>
+          <a class="btn b3" href="https://www.eldiario.es" target="_blank" rel="noopener">elDiario.es</a>
+          <a class="btn b4" href="https://www.rtve.es/noticias/" target="_blank" rel="noopener">RTVE Noticias</a>
+        </div>
+      </article>
+
+      <article class="category">
+        <h2>Trabajo y estudio</h2>
+        <div class="links">
+          <a class="btn b5" href="https://mail.google.com" target="_blank" rel="noopener">Gmail</a>
+          <a class="btn b1" href="https://calendar.google.com" target="_blank" rel="noopener">Calendar</a>
+          <a class="btn b2" href="https://www.notion.so" target="_blank" rel="noopener">Notion</a>
+        </div>
+      </article>
+
+      <article class="category">
+        <h2>Entretenimiento</h2>
+        <div class="links">
+          <a class="btn b3" href="https://www.netflix.com" target="_blank" rel="noopener">Netflix</a>
+          <a class="btn b4" href="https://www.spotify.com" target="_blank" rel="noopener">Spotify</a>
+          <a class="btn b5" href="https://www.twitch.tv" target="_blank" rel="noopener">Twitch</a>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="footer">Hecho para publicarlo gratis con GitHub Pages.</div>
+  </main>
+</body>
+</html>
