@@ -114,6 +114,20 @@
       font-size:.92rem;
       text-align:center;
     }
+
+        /* Reglas específicas para la categoría de 2 filas y 3 columnas */
+    .category.tworow-threecol .links{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+      gap: 12px;
+    }
+
+    /* Separación aumentada entre fila 1 y fila 2 */
+    .category.tworow-threecol .links + .links {
+      margin-top: 32px; /* ajusta este valor si quieres más/menos espacio */
+    }
+    }
+    
   </style>
 </head>
 <body>
